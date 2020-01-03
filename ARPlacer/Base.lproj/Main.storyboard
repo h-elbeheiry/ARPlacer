@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8La-3R-q8s">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="Ubc-bg-4wZ">
+            <objects>
+                <viewController id="8La-3R-q8s" customClass="LaunchViewController" customModule="ARPlacer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dgv-XZ-Uua">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="tjW-T1-ncD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHX-H1-CeV" customClass="CSAnimationView">
+                                <rect key="frame" x="112" y="268.5" width="150" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ARPlacer.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFq-Ix-1nm">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="NGc-mC-IPc"/>
+                                    <constraint firstItem="BFq-Ix-1nm" firstAttribute="height" secondItem="QHX-H1-CeV" secondAttribute="height" id="SN2-Hg-CMm"/>
+                                    <constraint firstAttribute="width" constant="150" id="SR0-Ya-nPA"/>
+                                    <constraint firstItem="BFq-Ix-1nm" firstAttribute="centerY" secondItem="QHX-H1-CeV" secondAttribute="centerY" id="jxh-TU-WVD"/>
+                                    <constraint firstItem="BFq-Ix-1nm" firstAttribute="centerX" secondItem="QHX-H1-CeV" secondAttribute="centerX" id="qcy-K5-pd2"/>
+                                    <constraint firstItem="BFq-Ix-1nm" firstAttribute="width" secondItem="QHX-H1-CeV" secondAttribute="width" id="wQ9-ra-Jzx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="slideDown"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QHX-H1-CeV" firstAttribute="centerX" secondItem="exF-z6-l3D" secondAttribute="centerX" id="C31-fu-flg"/>
+                            <constraint firstItem="tjW-T1-ncD" firstAttribute="top" secondItem="Dgv-XZ-Uua" secondAttribute="top" id="Dpe-uB-Kx6"/>
+                            <constraint firstItem="tjW-T1-ncD" firstAttribute="bottom" secondItem="exF-z6-l3D" secondAttribute="bottom" id="T0N-va-tgm"/>
+                            <constraint firstItem="tjW-T1-ncD" firstAttribute="trailing" secondItem="exF-z6-l3D" secondAttribute="trailing" id="VbF-Zy-XPZ"/>
+                            <constraint firstItem="QHX-H1-CeV" firstAttribute="centerY" secondItem="exF-z6-l3D" secondAttribute="centerY" id="rye-hk-Mo2"/>
+                            <constraint firstItem="tjW-T1-ncD" firstAttribute="leading" secondItem="exF-z6-l3D" secondAttribute="leading" id="yHC-i4-K3B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="exF-z6-l3D"/>
+                    </view>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="toSceneView" id="gON-wz-N8Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VoF-iq-oTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="54"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sceneViewController" id="BV1-FR-VrT" customClass="ViewController" customModule="ARPlacer" customModuleProvider="target" sceneMemberID="viewController">
                     <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -22,6 +80,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="188" y="54"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ARPlacer.png" width="882" height="880"/>
+        <image name="SplashScreen.png" width="1125" height="2436"/>
+    </resources>
 </document>

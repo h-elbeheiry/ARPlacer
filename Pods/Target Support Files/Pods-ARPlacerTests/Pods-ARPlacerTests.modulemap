@@ -1,0 +1,6 @@
+framework module Pods_ARPlacerTests {
+  umbrella header "Pods-ARPlacerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

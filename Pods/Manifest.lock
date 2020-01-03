@@ -1,0 +1,48 @@
+PODS:
+  - Canvas (0.1.2)
+  - Floaty (4.0.0)
+  - MaterialComponents/Buttons (46.1.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Buttons+Extensions (46.1.0):
+    - MaterialComponents/Buttons+Extensions/ColorThemer (= 46.1.0)
+    - MaterialComponents/Buttons+Extensions/TitleColorAccessibilityMutator (= 46.1.0)
+  - MaterialComponents/Buttons+Extensions/ColorThemer (46.1.0):
+    - MaterialComponents/Buttons
+    - MaterialComponents/Themes
+  - MaterialComponents/Buttons+Extensions/TitleColorAccessibilityMutator (46.1.0):
+    - MaterialComponents/Buttons
+    - MDFTextAccessibility
+  - MaterialComponents/Ink (46.1.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (46.1.0)
+  - MaterialComponents/private/Math (46.1.0)
+  - MaterialComponents/ShadowElevations (46.1.0)
+  - MaterialComponents/ShadowLayer (46.1.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Themes (46.1.0)
+  - MaterialComponents/Typography (46.1.0):
+    - MaterialComponents/private/Application
+  - MDFInternationalization (1.0.4)
+  - MDFTextAccessibility (1.2.0)
+
+DEPENDENCIES:
+  - Canvas (~> 0.1.2)
+  - Floaty (~> 4.0.0)
+  - MaterialComponents/Buttons+Extensions
+
+SPEC CHECKSUMS:
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  Floaty: 4f88811bbf08521807f42355db6a9c0db85d5d78
+  MaterialComponents: f14582653f35407ff1aef50e705a15c1b0d0b70c
+  MDFInternationalization: e355b0cebecf53d60233bd267084e49366c82513
+  MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
+
+PODFILE CHECKSUM: fed892337d66075f4fcdb6c2b1c4293728bf07df
+
+COCOAPODS: 1.4.0
